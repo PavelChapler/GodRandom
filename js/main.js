@@ -1,10 +1,19 @@
-let question = prompt("Что бы вы хотели спросить?", '');
-let word = question.indexOf("ть");
+"use strict"
+
+let question
 
 function handler () {
-    if (question.includes("ть")) {
-        let testWord = question.slice(word - 12)
-        
-    }
+    if (question.includes("Пить")) {
+        return (randomizer()) ? "Пить" : "Не пить"
+    } else if (question.includes("Бухать")) {
+        return (randomizer()) ? "Бухать" : "Не бухать"
+    } else if (question.includes("Курить")) {
+        return (randomizer()) ? "Курить" : "Курить вредно"
+    } else {
+        return (randomizer()) ? "Да" : "Нет"
+    }   
 }
-"А что делать?"
+
+function randomizer () {
+    return 0 + Math.round(Math.random()) * 1  
+}
