@@ -7,6 +7,7 @@
     <meta name="author" content="Pavel">
     <title>Бог рандома</title>
     <!-- Bootstrap CSS only -->
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,9 +17,9 @@
             <div class="base__wrapper">
                 <img src="images/Randogod.png" alt="Jesus Random">
                 <form action="#" autocomplete="on" class="forms">
-                    <input type="text" value="" name="question" id="question" class="forms__main" required>                   
-                    <input type="button" class="forms__others">
-                    <input type="reset" class="forms__others">              
+                    <textarea placeholder="Пить пиво?..." autocorrect="on" maxlength="100" rows="2" name="question" id="question" class="forms__main" required autofocus></textarea>               
+                    <input type="button" value="Решить судьбу" class="forms__others">
+                    <input type="reset" value="&#10008" class="forms__others">              
                 </form>
             </div>
         </div>

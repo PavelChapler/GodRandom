@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 
 .base__wrapper {
   position: relative;
-  width: 400px;
+  width: 350px;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -44,11 +45,52 @@ body {
 }
 
 .base .forms__main {
-  display: block;
   width: 100%;
   margin-bottom: 10px;
+  padding: 20px 100px 20px 20px;
+  resize: none;
+  outline: none;
+  background-color: #1f1e1e;
+  border-radius: 15px 15px 0 0;
+  border: 3px solid #535353;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #4eecf1;
 }
 
 .base .forms__others {
   width: calc(50% -  5px);
+  height: 40px;
+  background-color: transparent;
+  color: #747474;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  border: 2px solid #4cd663;
+  border-radius: 0 0 0 15px;
+  font-size: 14px;
+}
+
+.base .forms__others:last-child {
+  border: 2px solid #d64c4c;
+  border-radius: 0 0 15px 0;
+  font-size: 30px;
+}
+
+.base .forms__others:hover {
+  background-color: #4cd663;
+  color: #fff;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  font-size: 17px;
+}
+
+.base .forms__others:hover:last-child {
+  background-color: #d64c4c;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  font-size: 20px;
+  vertical-align: top;
 }

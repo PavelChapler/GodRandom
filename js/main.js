@@ -1,14 +1,16 @@
 "use strict"
 
-let question
+let question = document.getElementById("question")
 
 function handler () {
     if (question.includes("Пить")) {
-        return (randomizer()) ? "Пить" : "Не пить"
+        return (randomizer()) ? "Пить!" : "Не пить!"
     } else if (question.includes("Бухать")) {
-        return (randomizer()) ? "Бухать" : "Не бухать"
+        return (randomizer()) ? "Бухать!" : "Не бухать!"
     } else if (question.includes("Курить")) {
-        return (randomizer()) ? "Курить" : "Курить вредно"
+        return (randomizer()) ? "Курить!" : "Курить вредно"
+    } else if (question.length <= 3) {
+        return "Что?"
     } else {
         return (randomizer()) ? "Да" : "Нет"
     }   
