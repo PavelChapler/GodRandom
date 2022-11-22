@@ -18,11 +18,21 @@
                 <img src="images/Randogod.png" alt="Jesus Random">
                 <form action="#" autocomplete="on" class="forms">
                     <textarea placeholder="Пить пиво?..." autocorrect="on" maxlength="100" rows="2" name="question" id="question" class="forms__main" required autofocus></textarea>               
-                    <input type="button" value="Решить судьбу" class="forms__others">
+                    <input type="button" value="Решить судьбу" class="forms__others" id="confirm">
                     <input type="reset" value="&#10008" class="forms__others">              
                 </form>
             </div>
         </div>
+
+        <div class="overlay" id="overlay">
+            <div class="modal" id="modal">
+                <div class="modal__title" id="answer"></div>
+                <button class="modal__close">&#10006</button>
+            </div>
+        </div>
     </section>
+    
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
