@@ -9,7 +9,7 @@ body
     background-color: $background
 
 .base
-    padding-top: 40px
+    padding-top: 90px
 
     &__title
         text-transform: uppercase
@@ -79,7 +79,8 @@ body
             font-size: 20px
             vertical-align: top
 
-.overlay
+// Modal
+.modal__container
     display: flex
     justify-content: center
     align-items: center
@@ -88,45 +89,60 @@ body
     right: 0
     width: 100%
     height: 100%
-    background-color: rgba(0, 0, 0, .5) 
-    z-index: 10
     -webkit-overflow-scrolling: touch
     overflow: hidden
+    z-index: 10
     visibility: hidden
     opacity: 0
-    transition: 0.5s all
+    .modal
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        padding: 20px 5px
+        border: 3px solid #535353
+        border-radius: 50% 
+        background-color: $background 
+        text-align: center 
+        font-weight: 500
+        font-size: 20px
+        color: #fff
+        transform: translateY(-28px)
+        z-index: 10
+        &__close
+            position: absolute
+            top: -3px
+            right: -3px
+            background: #141414
+            border: nonne
+            outline: 0
+            color: $gray
+        &__title
+            opacity: 0
 
-.modal
-    display: flex
-    justify-content: center
-    align-items: center
-    position: relative
-    width: 150px
-    height: 150px
-    padding: 20px 30px
-    border: 3px solid #535353
-    border-radius: 50% 
-    background-color: $background 
-    text-align: center 
-    font-weight: 500
-    font-size: 20px
-    color: #fff
-    transform: translateY(-28px)
-    z-index: 10
-    
-    &__close
-        position: absolute
-        top: -3px
-        right: -3px
-        background: #141414
-        border: nonne
-        outline: 0
-        color: $gray
+// JS
+.modal__active
+    overflow: hidden
+    .container
+        animation: scaleBack 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+    .modal__container
+        visibility: visible
+        opacity: 1
+        animation: backgroundFadeIn 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+    .modal
+        animation: movementCircle 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+        &__title
+            animation: showText 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.2s forwards
 
-.modal__visible
-    visibility: visible
-    opacity: 1
-    transition: 0.5s all
+.out
+    .container
+        animation: scaleForward 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+    .modal__container
+        animation: backgroundFadeOut 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+    .modal
+        animation: FadeOutCircle 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
+        &__title
+            animation: fadeText 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards  
 
 
 
