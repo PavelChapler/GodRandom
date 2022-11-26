@@ -99,7 +99,7 @@ body
         justify-content: center
         align-items: center
         position: relative
-        padding: 20px 5px
+        padding: 20px 0
         border: 3px solid #535353
         border-radius: 50% 
         background-color: $background 
@@ -118,6 +118,7 @@ body
             outline: 0
             color: $gray
         &__title
+            white-space: nowrap
             opacity: 0
 
 // JS
@@ -133,6 +134,7 @@ body
         animation: movementCircle 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards
         &__title
             animation: showText 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.2s forwards
+            
 
 .out
     .container

@@ -160,6 +160,9 @@
   }
   100% {
     opacity: 1;
+    white-space: normal;
+    -webkit-hyphens: auto;
+            hyphens: auto;
   }
 }
 
@@ -169,6 +172,10 @@
   }
   100% {
     opacity: 1;
+    white-space: normal;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
   }
 }
 
@@ -320,7 +327,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding: 20px 5px;
+  padding: 20px 0;
   border: 3px solid #535353;
   border-radius: 50%;
   background-color: #1f1e1e;
@@ -344,6 +351,7 @@ body {
 }
 
 .modal__container .modal__title {
+  white-space: nowrap;
   opacity: 0;
 }
 
