@@ -22,7 +22,9 @@ function showAnswer () {
                 if (question.includes("ся")) suffix = question.indexOf("ся") + 2;
                 if (question.includes("ти")) suffix = question.indexOf("ти") + 2;
             let stroke = question.slice(0, suffix);
+            if (stroke.at(-1) == "?") stroke = stroke.slice(0, stroke.length - 1)
             let words = stroke.split(" ");
+            
             return words.pop();
         }
         
